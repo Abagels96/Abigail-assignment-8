@@ -1,17 +1,14 @@
 package com.coderscampus.assignment;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executors;
 
 public class Assignment8 {
     private List<Integer> numbers = null;
     private AtomicInteger i = new AtomicInteger(0);
+    
+    ConcurrentMap<Integer, Integer> listOfValues= new ConcurrentHashMap<>();
 
     public Assignment8() {
         try {
@@ -46,6 +43,8 @@ public class Assignment8 {
         // delay
         try {
             Thread.sleep(500);
+            ExecutorService pool= Executors.newCachedThreadPool();
+            CompletableFuture request= CompletableFuture.runAsync(start, pool)->
         } catch (InterruptedException e) {
         }
 
