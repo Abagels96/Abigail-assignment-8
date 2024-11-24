@@ -17,7 +17,7 @@ public class Assignment8a {
     private AtomicInteger i = new AtomicInteger(0);
     
 
-    public void Assignment8a() {
+    public Assignment8a() {
         try {
             // Make sure you download the output.txt file for Assignment 8
             // and place the file in the root of your Java project
@@ -39,7 +39,7 @@ public class Assignment8a {
      * @return Integers from the parsed txt file, 1,000 numbers at a time
      */
     
-    public List<Integer> getNumbers() throws InterruptedException {
+    public List<Integer> getNumbers()  {
         int start, end;
         synchronized (i) {
             start = i.get();
