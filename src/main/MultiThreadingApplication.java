@@ -47,8 +47,8 @@ public void asynchronousFutures() {
 		e.printStackTrace();
 	}
 			
-	printTotalCounts(listOfValues);
 }
+	printTotalCounts(listOfValues);
 	}
 
 	
