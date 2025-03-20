@@ -12,12 +12,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Assignment8a {
+public class Assignment8 {
     private List<Integer> numbers = null;
     private AtomicInteger i = new AtomicInteger(0);
     
 
-    public Assignment8a() {
+    public Assignment8() {
         try {
             // Make sure you download the output.txt file for Assignment 8
             // and place the file in the root of your Java project
