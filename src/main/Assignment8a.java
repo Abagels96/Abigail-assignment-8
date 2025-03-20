@@ -39,7 +39,9 @@ public class Assignment8a {
      * @return Integers from the parsed txt file, 1,000 numbers at a time
      */
     
-    public List<Integer> getNumbers()  {
+    
+        
+public List<Integer> getNumbers() {
         int start, end;
         synchronized (i) {
             start = i.get();
@@ -47,6 +49,13 @@ public class Assignment8a {
 
             System.out.println("Starting to fetch records " + start + " to " + (end));
         }
+        // force thread to pause for half a second to simulate actual Http / API traffic
+        // delay
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
+
         List<Integer> newList = new ArrayList<>();
         IntStream.range(start, end)
                 .forEach(n -> {
@@ -55,7 +64,6 @@ public class Assignment8a {
         System.out.println("Done Fetching records " + start + " to " + (end));
         return newList;
     }
-
     
 
     
